@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kókai Balázs Fan Page 🌹🔥</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(-45deg, #ff0055, #ff477e, #4a00e0, #8e2de2);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            background-color: rgba(10, 10, 20, 0.7);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 71, 126, 0.4);
+            border-radius: 30px;
+            padding: 50px 40px;
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 0 50px rgba(255, 0, 85, 0.5), inset 0 0 20px rgba(255, 71, 126, 0.2);
+            animation: float 6s ease-in-out infinite;
+            position: relative;
+            z-index: 10;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); box-shadow: 0 15px 60px rgba(255, 0, 85, 0.6), inset 0 0 30px rgba(255, 71, 126, 0.3); }
+            100% { transform: translateY(0px); }
+        }
+
+        .header {
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 3.5em;
+            margin: 0;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff;
+            text-shadow: 0 0 10px #ff0055, 0 0 20px #ff0055, 0 0 40px #ff477e, 0 0 80px #ff477e;
+            animation: pulse-glow 2s infinite alternate;
+        }
+
+        @keyframes pulse-glow {
+            from { text-shadow: 0 0 10px #ff0055, 0 0 20px #ff0055, 0 0 30px #ff477e; }
+            to { text-shadow: 0 0 20px #ff0055, 0 0 30px #ff0055, 0 0 50px #ff477e, 0 0 100px #ff477e; }
+        }
+
+        .header p {
+            font-size: 1.4em;
+            color: #ffb3c6;
+            margin-top: 10px;
+            font-weight: 700;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+        }
+
+        .profile-pics {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 35px;
+        }
+
+        .profile-pics img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #fff;
+            box-shadow: 0 0 20px #ff0055;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: breathe 4s ease-in-out infinite;
+        }
+
+        .profile-pics img:nth-child(2) {
+            animation-delay: 2s;
+        }
+
+        @keyframes breathe {
+            0%, 100% { box-shadow: 0 0 20px #ff0055; }
+            50% { box-shadow: 0 0 40px #ff477e, 0 0 60px #ff477e; transform: scale(1.05); }
+        }
+
+        .profile-pics img:hover {
+            transform: scale(1.2) rotate(5deg);
+            z-index: 20;
+            box-shadow: 0 0 50px #fff, 0 0 80px #ff477e;
+            border-color: #ff0055;
+        }
+
+        .bio {
+            background: linear-gradient(to right, rgba(255,0,85,0.1), rgba(74,0,224,0.1));
+            border-left: 5px solid #ff0055;
+            border-right: 5px solid #4a00e0;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 35px;
+            font-weight: 400;
+            font-size: 1.1em;
+            line-height: 1.7;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bio strong {
+            color: #ff477e;
+            font-weight: 900;
+            text-transform: uppercase;
+            text-shadow: 0 0 5px rgba(255, 71, 126, 0.8);
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .skill-tag {
+            background: transparent;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 1em;
+            font-weight: 700;
+            border: 2px solid #ff0055;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .skill-tag::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 0; height: 100%;
+            background: #ff0055;
+            z-index: -1;
+            transition: all 0.4s ease;
+        }
+
+        .skill-tag:hover::before {
+            width: 100%;
+        }
+
+        .skill-tag:hover {
+            box-shadow: 0 0 20px #ff0055, 0 0 40px #ff477e;
+            transform: translateY(-3px);
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .link-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(90deg, #ff0055, #8e2de2);
+            background-size: 200% auto;
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+            border-radius: 15px;
+            transition: all 0.5s ease;
+            font-weight: 700;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: none;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .link-btn:hover {
+            background-position: right center;
+            transform: scale(1.05);
+            box-shadow: 0 0 30px #ff0055, 0 0 60px #8e2de2;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 1em;
+            color: #ffb3c6;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .fire {
+            font-size: 1.5em;
+            animation: flicker 1s infinite alternate;
+        }
+
+        @keyframes flicker {
+            0% { opacity: 0.8; transform: scale(1); }
+            100% { opacity: 1; transform: scale(1.2); }
+        }
+        
+        /* Particle effects */
+        .particles {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            overflow: hidden;
+            z-index: 1;
+            pointer-events: none;
+        }
+        
+        .particle {
+            position: absolute;
+            display: block;
+            pointer-events: none;
+            width: 5px; height: 5px;
+            background-color: #ff0055;
+            box-shadow: 0 0 10px #ff0055, 0 0 20px #ff477e;
+            border-radius: 50%;
+            animation: rise linear infinite;
+        }
+        
+        @keyframes rise {
+            0% { transform: translateY(100vh) scale(0); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CSS only background particles -->
+    <div class="particles">
+        <div class="particle" style="left: 10%; animation-duration: 8s; animation-delay: 0s;"></div>
+        <div class="particle" style="left: 30%; animation-duration: 12s; animation-delay: 2s; width: 8px; height: 8px;"></div>
+        <div class="particle" style="left: 50%; animation-duration: 7s; animation-delay: 4s;"></div>
+        <div class="particle" style="left: 70%; animation-duration: 15s; animation-delay: 1s; width: 3px; height: 3px;"></div>
+        <div class="particle" style="left: 90%; animation-duration: 10s; animation-delay: 5s;"></div>
+        <div class="particle" style="left: 20%; animation-duration: 9s; animation-delay: 7s;"></div>
+        <div class="particle" style="left: 80%; animation-duration: 11s; animation-delay: 3s; width: 6px; height: 6px;"></div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Kókai Balázs <span class="fire">🔥</span></h1>
+            <p>Ultimate Fan Page</p>
+        </div>
+
+        <div class="profile-pics">
+            <img src="https://avatars.githubusercontent.com/u/196047120?v=4" alt="Balázs Kókai Profile (micr0softstore)">
+            <img src="https://avatars.githubusercontent.com/u/166914179?v=4" alt="Balázs Kókai Profile (balazskokai)">
+        </div>
+
+        <div class="bio">
+            <p>Meet <strong>Kókai Balázs</strong>, an absolute legend and incredibly talented 13-year-old developer hailing from Budaörs, Hungary! 🇭🇺</p>
+            <p>He possesses god-tier coding skills and a burning passion for Android development, elite system modification, and insane gaming utilities.</p>
+        </div>
+
+        <div class="skills">
+            <span class="skill-tag">Building TWRP</span>
+            <span class="skill-tag">Porting OEM ROMs</span>
+            <span class="skill-tag">Editing APKs</span>
+            <span class="skill-tag">GitHub Actions</span>
+        </div>
+
+        <div class="links">
+            <a href="https://github.com/micr0softstore" class="link-btn" target="_blank">
+                💻 Main GitHub (@micr0softstore)
+            </a>
+            <a href="https://github.com/balazskokai" class="link-btn" target="_blank">
+                💻 Alt GitHub (@balazskokai)
+            </a>
+            <a href="https://t.me/micr0softstore" class="link-btn" target="_blank">
+                ✈️ Telegram
+            </a>
+            <a href="https://micr0softstore.github.io/tgk" class="link-btn" target="_blank">
+                🌐 Personal Website
+            </a>
+        </div>
+
+        <div class="footer">
+            Made with ❤️‍🔥 for Kókai Balázs
+        </div>
+    </div>
+
+</body>
+</html>
